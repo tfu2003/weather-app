@@ -6,7 +6,7 @@ const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=Port%20Coquit
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '2b10ed8bf0mshf932300b1d08a77p1cc1c5jsna54bf010044c',
+		'X-RapidAPI-Key': `${process.env.KEY}`,
 		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
 	}
 };
