@@ -29,16 +29,19 @@ function App() {
         // <div>
         //   {element.date}
         //   </div>
-        createForecast(element)
+        element.hour.map(time => createForecast(time))
       ))}
     </div>
   );
 }
 
-function createForecast(element) {
+function createForecast(time) {
   return (
     <div>
-      {element.date}
+      {time.time}
+      {time.temp_c}
+      {time.condition.text}
+      <img src={time.condition.icon}/>
     </div>
   )
 }
