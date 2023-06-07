@@ -25,25 +25,26 @@ function App() {
 
   return (
     <div className="App">
+      <h1> Weather for Port Coquitlam </h1>
       {container.map((element, i) => (
-        // <div>
-        //   {element.date}
-        //   </div>
-        element.hour.map(time => createForecast(time))
+        <div className="dates" key={i}>{element.hour.map((time, i) => createForecast(time, i))}</div>
       ))}
     </div>
   );
 }
 
-function createForecast(time) {
+function createForecast(time, i) {
   return (
-    <div>
+    <div className="forecast" key={i}>
       {time.time}
+      <br />
       {time.temp_c}
+      <br />
       {time.condition.text}
-      <img src={time.condition.icon}/>
+      <br />
+      <img src={time.condition.icon} />
     </div>
-  )
+  );
 }
 
 export default App;
