@@ -38,11 +38,11 @@ function createForecast(time, i) {
     <div className="forecast" key={i}>
       {time.time}
       <br />
-      {time.temp_c}
+      {time.temp_c} °C
       <br />
       {time.condition.text}
       <br />
-      <img src={time.condition.icon} />
+      <img src={time.condition.icon} alt="weather"/>
     </div>
   );
 }
